@@ -1,0 +1,65 @@
+/* Общий файл стилей для страницы «Обо мне» и страницы отчёта */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+  background: #f2f4f8;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 40px 40px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Навигация */
+.nav { padding-bottom: 12px; margin-bottom: 24px; border-bottom: 1px solid #ccc; }
+.nav a { margin: 0 6px; }
+.print-link { float: right; }
+
+h1 { font-size: 30px; margin-bottom: 16px; color: #1f3b6e; }
+h2 { font-size: 22px; margin: 28px 0 10px; color: #1f3b6e; }
+h3 { font-size: 18px; margin: 20px 0 8px; }
+p  { margin-bottom: 12px; }
+ul, ol { margin: 0 0 12px 24px; }
+
+a { color: #1a5fb4; }
+a:hover { color: #c01c28; }
+
+img { max-width: 100%; }
+
+.info { margin-bottom: 16px; }
+.photo { display: block; width: 240px; margin: 16px 0; border: 4px solid #1f3b6e; }
+
+.figure { margin: 14px 0; text-align: center; }
+.figure img { border: 1px solid #aaa; margin: 4px; }
+.figure p { font-size: 14px; font-style: italic; }
+
+#footer { margin-top: 40px; padding-top: 10px; border-top: 1px solid #999; font-size: 14px; color: #555; }
+
+/* Титульный лист */
+.title-page { text-align: center; padding-bottom: 40px; }
+.title-page p { margin-bottom: 6px; }
+.title-page .kafedra { margin: 40px 0 120px; font-weight: bold; }
+.title-page .subject { font-size: 22px; font-weight: bold; margin-bottom: 6px; }
+.title-page .task { font-size: 20px; margin-bottom: 120px; }
+.title-page table { margin: 0 auto 120px; text-align: left; border-collapse: collapse; }
+.title-page td { padding: 4px 12px; }
+.title-page td:first-child { font-weight: bold; }
+
+hr.sep { border: 0; border-top: 1px solid #ccc; margin: 30px 0; }
+
+/* Печать */
+@media print {
+  body { background: #fff; font-size: 12pt; color: #000; }
+  .page { max-width: none; padding: 0; min-height: 0; }
+  .nav, .print-link { display: none; }
+  .title-page { page-break-after: always; }
+  hr.sep { display: none; }
+  a { color: #000; text-decoration: none; }
+}
